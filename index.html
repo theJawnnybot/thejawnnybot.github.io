@@ -361,52 +361,97 @@
             A selection of projects that showcase our craft.
           </p>
         </div>
-        <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 -->
-          <article class="reveal rounded-2xl border border-dark-700/60 bg-dark-900/70 backdrop-blur-sm overflow-hidden hover:border-brand-teal/40 transition-all duration-300 group">
-            <div class="h-48 bg-gradient-to-br from-brand-teal/30 to-blue-900/40 flex items-center justify-center">
-              <svg class="w-16 h-16 text-brand-teal/50 group-hover:text-brand-teal/70 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-            </div>
-            <div class="p-6">
-              <h3 class="font-fira font-bold text-white text-lg">LabCoat for GitLab</h3>
-              <p class="mt-2 text-sm text-gray-400 leading-relaxed">A feature-rich GitLab client for Android, putting the full power of GitLab in your pocket with an intuitive material design interface.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Android</span>
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Kotlin</span>
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">GitLab API</span>
+        <!-- Carousel -->
+        <div class="mt-16 relative">
+          <div id="carousel" class="overflow-hidden">
+            <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
+              <!-- Slide 1: LabCoat -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div class="mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  <div class="flex-shrink-0">
+                    <div class="relative mx-auto w-[240px] rounded-[2rem] border-[3px] border-dark-700 bg-dark-900 p-2 shadow-2xl shadow-brand-teal/10">
+                      <img src="/images/labcoat_screenshot.png" alt="LabCoat for GitLab screenshot" class="rounded-[1.5rem] w-full" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="text-center md:text-left">
+                    <img src="/images/labcoat_icon.png" alt="LabCoat icon" width="64" height="64" class="rounded-2xl mx-auto md:mx-0 mb-4 shadow-lg">
+                    <h3 class="font-fira font-bold text-white text-2xl">LabCoat for GitLab</h3>
+                    <p class="mt-3 text-gray-400 leading-relaxed max-w-lg">LabCoat is a native Android app built in Kotlin for connecting to and viewing projects hosted on a GitLab server. Currently the most starred Kotlin project on GitLab.com, it was created to give back to the GitLab community, with over 50,000 installs on the Play Store. Open source, of course.</p>
+                    <div class="mt-5 flex flex-wrap gap-2 justify-center md:justify-start">
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Android</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Kotlin</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Open Source</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.commit451.gitlab" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm text-brand-teal hover:text-brand-teal/80 transition-colors">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302-2.302 2.302-2.698-2.302 2.698-2.302zM5.864 3.458L16.8 9.79l-2.301 2.302-8.635-8.634z"/></svg>
+                      View on Google Play
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: 365 Journals -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div class="mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  <div class="flex-shrink-0">
+                    <div class="relative mx-auto w-[240px] rounded-[2rem] border-[3px] border-dark-700 bg-dark-900 p-2 shadow-2xl shadow-brand-teal/10">
+                      <img src="/images/365_screenshot.png" alt="365 Journals screenshot" class="rounded-[1.5rem] w-full" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="text-center md:text-left">
+                    <img src="/images/365_icon.png" alt="365 Journals icon" width="64" height="64" class="rounded-2xl mx-auto md:mx-0 mb-4 shadow-lg">
+                    <h3 class="font-fira font-bold text-white text-2xl">365 Journals</h3>
+                    <p class="mt-3 text-gray-400 leading-relaxed max-w-lg">A daily journal app that prompts you with 366 different questions, one for each day. When you finish a year of entries, you return to the same questions and can compare what you wrote last year to this year. With over 90,000 installs, we love hearing how it has changed lives by giving people somewhere to focus their writing and feelings.</p>
+                    <div class="mt-5 flex flex-wrap gap-2 justify-center md:justify-start">
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Android</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Kotlin</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Journaling</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.jawnnypoo.j365" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm text-brand-teal hover:text-brand-teal/80 transition-colors">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302-2.302 2.302-2.698-2.302 2.698-2.302zM5.864 3.458L16.8 9.79l-2.301 2.302-8.635-8.634z"/></svg>
+                      View on Google Play
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: Askarasu -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div class="mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  <div class="flex-shrink-0">
+                    <div class="relative mx-auto w-[240px] rounded-[2rem] border-[3px] border-dark-700 bg-dark-900 p-2 shadow-2xl shadow-brand-teal/10">
+                      <img src="/images/askarasu_screenshot.png" alt="Askarasu screenshot" class="rounded-[1.5rem] w-full" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="text-center md:text-left">
+                    <img src="/images/askarasu_icon.png" alt="Askarasu icon" width="64" height="64" class="rounded-2xl mx-auto md:mx-0 mb-4 shadow-lg">
+                    <h3 class="font-fira font-bold text-white text-2xl">Askarasu</h3>
+                    <p class="mt-3 text-gray-400 leading-relaxed max-w-lg">You vs. the AI. Askarasu is a word trivia game with a twist — you're chatting with an AI that knows the answer, but won't just tell you. Ask yes/no questions, narrow down the possibilities, and guess the word before the day is over and the challenge expires. Think fast. Ask smart. Beat the AI.</p>
+                    <div class="mt-5 flex flex-wrap gap-2 justify-center md:justify-start">
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Android</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">AI</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Word Game</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.commit451.lalilulelo" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm text-brand-teal hover:text-brand-teal/80 transition-colors">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302-2.302 2.302-2.698-2.302 2.698-2.302zM5.864 3.458L16.8 9.79l-2.301 2.302-8.635-8.634z"/></svg>
+                      View on Google Play
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </article>
-          <!-- Project 2 -->
-          <article class="reveal rounded-2xl border border-dark-700/60 bg-dark-900/70 backdrop-blur-sm overflow-hidden hover:border-brand-teal/40 transition-all duration-300 group">
-            <div class="h-48 bg-gradient-to-br from-purple-900/40 to-brand-red/20 flex items-center justify-center">
-              <svg class="w-16 h-16 text-purple-400/50 group-hover:text-purple-400/70 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-            </div>
-            <div class="p-6">
-              <h3 class="font-fira font-bold text-white text-lg">Open Source Libraries</h3>
-              <p class="mt-2 text-sm text-gray-400 leading-relaxed">A curated collection of open-source Android and Kotlin libraries used by thousands of developers. Image loading, networking, and UI components.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Open Source</span>
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Kotlin</span>
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Libraries</span>
-              </div>
-            </div>
-          </article>
-          <!-- Project 3 -->
-          <article class="reveal rounded-2xl border border-dark-700/60 bg-dark-900/70 backdrop-blur-sm overflow-hidden hover:border-brand-teal/40 transition-all duration-300 group">
-            <div class="h-48 bg-gradient-to-br from-amber-900/30 to-brand-teal/20 flex items-center justify-center">
-              <svg class="w-16 h-16 text-amber-400/50 group-hover:text-amber-400/70 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg>
-            </div>
-            <div class="p-6">
-              <h3 class="font-fira font-bold text-white text-lg">Enterprise Web Platform</h3>
-              <p class="mt-2 text-sm text-gray-400 leading-relaxed">A scalable web platform built with modern frontend technologies, delivering real-time data visualization and seamless user workflows.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">React</span>
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">TypeScript</span>
-                <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal border border-brand-teal/20">Node.js</span>
-              </div>
-            </div>
-          </article>
+          </div>
+          <!-- Carousel Controls -->
+          <button id="carousel-prev" aria-label="Previous project" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-dark-700 bg-dark-900/90 text-gray-400 hover:border-brand-teal hover:text-brand-teal transition-all backdrop-blur-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="carousel-next" aria-label="Next project" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-dark-700 bg-dark-900/90 text-gray-400 hover:border-brand-teal hover:text-brand-teal transition-all backdrop-blur-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <!-- Dots -->
+          <div class="flex justify-center gap-3 mt-8">
+            <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-teal transition-all" data-index="0" aria-label="Go to slide 1"></button>
+            <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-dark-700 hover:bg-gray-500 transition-all" data-index="1" aria-label="Go to slide 2"></button>
+            <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-dark-700 hover:bg-gray-500 transition-all" data-index="2" aria-label="Go to slide 3"></button>
+          </div>
         </div>
       </div>
     </section>
@@ -479,6 +524,44 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('shadow-lg', window.scrollY > 20);
     });
+
+    // Carousel
+    (() => {
+      const track = document.getElementById('carousel-track');
+      const prev = document.getElementById('carousel-prev');
+      const next = document.getElementById('carousel-next');
+      const dots = document.querySelectorAll('.carousel-dot');
+      const slides = track.children;
+      let current = 0;
+      const total = slides.length;
+
+      function goTo(i) {
+        current = ((i % total) + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, idx) => {
+          d.classList.toggle('bg-brand-teal', idx === current);
+          d.classList.toggle('bg-dark-700', idx !== current);
+        });
+      }
+
+      prev.addEventListener('click', () => goTo(current - 1));
+      next.addEventListener('click', () => goTo(current + 1));
+      dots.forEach(d => d.addEventListener('click', () => goTo(parseInt(d.dataset.index))));
+
+      // Touch/swipe support
+      let startX = 0;
+      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+      });
+
+      // Auto-advance every 6s
+      let autoplay = setInterval(() => goTo(current + 1), 6000);
+      [prev, next, ...dots].forEach(el => {
+        el.addEventListener('click', () => { clearInterval(autoplay); autoplay = setInterval(() => goTo(current + 1), 6000); });
+      });
+    })();
   </script>
 </body>
 </html>
